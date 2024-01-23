@@ -25,7 +25,6 @@ prices_pref_1 = [price.replace("/mo", "").replace("1 bd", "").replace("+ 1bd", "
 prices_pref_2 = [price.replace("+", "").strip() for price in prices_pref_1]
 addy = soup.findAll("address")
 addresses = [place.text.strip().replace("|", "") for place in addy]
-symbols = ["+", "/", "mo"]
 driver.get(google_doc_link)
 time.sleep(1)
 
